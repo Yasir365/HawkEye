@@ -9,6 +9,9 @@ import { DataService } from 'src/app/helper/data.service';
 export class SubscribersComponent implements OnInit {
   subscribers: any = [];
   loader = false;
+  page = 1;
+  itemsPerPage = 10;
+  totalRecords = 15;
 
   constructor(private api: DataService) { }
 
@@ -18,11 +21,21 @@ export class SubscribersComponent implements OnInit {
 
   getSubscriber(){
     this.loader = true;
-    this.api.getSubscribers().subscribe((res:any)=>{
+    let params={
+      page: this.page,
+      perPage: this.itemsPerPage
+    }
+    this.api.getSubscribers(params).subscribe((res:any)=>{
       if(res.success){
-        this.subscribers = res.data;
+        this.subscribers = res.data.data;
+        this.totalRecords = res.data.total;
         this.loader = false;
       }
     })
+  }
+
+  onPageChange(pageNumber: number) {
+    this.page = pageNumber;
+    this.getSubscriber();
   }
 }

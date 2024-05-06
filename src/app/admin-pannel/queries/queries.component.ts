@@ -18,6 +18,9 @@ export class QueriesComponent implements OnInit {
   dataFetching = true;
   queries: any = [];
   loader = false;
+  page = 1;
+  itemsPerPage = 10;
+  totalRecords = 0;
 
   constructor(private api: DataService) { }
 
@@ -27,11 +30,21 @@ export class QueriesComponent implements OnInit {
 
   getSubscriber(){
     this.loader = true;
-    this.api.getContactUs().subscribe((res:any)=>{
+    let params={
+      page: this.page,
+      perPage: this.itemsPerPage
+    }
+    this.api.getContactUs(params).subscribe((res:any)=>{
       if(res.success){
-        this.queries = res.data;
+        this.queries = res.data.data;
+        this.totalRecords = res.data.total;
         this.loader = false;
       }
     })
+  }
+
+  onPageChange(pageNumber: number) {
+    this.page = pageNumber;
+    this.getSubscriber();
   }
 }

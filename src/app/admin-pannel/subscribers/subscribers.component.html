@@ -1,9 +1,11 @@
-<div class="wrapper" *ngIf="!loader">
-  <div class="card" *ngFor="let item of subscribers; let i = index">
-    <span>({{i+1}})</span>
+<div class="wrapper mb-4" *ngIf="!loader">
+  <div class="card" *ngFor="let item of subscribers | paginate: { itemsPerPage: itemsPerPage, currentPage: page, totalItems: totalRecords }; let i = index">
+    <span>({{ (page - 1) * itemsPerPage + i + 1 }})</span>
     <strong class="ms-2">{{item.email}}</strong>
   </div>
 </div>
+<pagination-controls *ngIf="!loader" (pageChange)="onPageChange($event)" [(ngModel)]="page" [itemsPerPage]="itemsPerPage"> </pagination-controls>
+
 
 <div class="loader" *ngIf="loader">
   <img src="assets/loaderx.gif" alt="">
