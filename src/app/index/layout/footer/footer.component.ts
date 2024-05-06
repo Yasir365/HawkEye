@@ -10,6 +10,8 @@ import { DataService } from 'src/app/helper/data.service';
 export class FooterComponent implements OnInit {
   loader = false;
   email = '';
+  date = new Date().getFullYear();
+  
   constructor(private api: DataService, private toastr: ToastrService) { }
 
   ngOnInit() {
