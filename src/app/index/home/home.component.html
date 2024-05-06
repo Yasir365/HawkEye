@@ -46,19 +46,26 @@
     </span>
 
     <div class="d-flex justify-content-center flex-wrap">
-        <div class="wrapper text-white" data-aos="slide-up">
+        <div class="wrapper text-white">
             <i class="fa-solid fa-car"></i>
-            <p class="count-num">$5000+</p>
+            <span class="d-flex align-items-center">
+                <p class="count-num" [countUp]="count1" [duration]="duration"></p>
+                <span>+</span>
+            </span>
             <p class="count-text">Loads Booked</p>
         </div>
-        <div class="wrapper text-white" data-aos="slide-up">
+        <div class="wrapper text-white">
             <i class="fa-solid fa-house"></i>
-            <p class="count-num">$5000+</p>
+            <span class="d-flex align-items-center">
+                <span>$</span>
+                <p class="count-num" [countUp]="count2" [duration]="duration2"></p>
+                <span>+</span>
+            </span>
             <p class="count-text">Average Gross Revenue</p>
         </div>
-        <div class="wrapper text-white" data-aos="slide-up">
+        <div class="wrapper text-white">
             <i class="fa-solid fa-book"></i>
-            <p class="count-num">$5000+</p>
+            <p class="count-num" [countUp]="count3" [duration]="duration"></p>
             <p class="count-text">Mln Lbs Dispatched</p>
         </div>
     </div>

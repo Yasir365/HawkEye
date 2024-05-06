@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   services: any = []
   workWithUs: any = []
+  count1 = 5000;
+  count2 = 7500;
+  count3 = 58;
+  duration = 1500;
+  duration2 = 2000;
   constructor() { }
 
   ngOnInit() {
