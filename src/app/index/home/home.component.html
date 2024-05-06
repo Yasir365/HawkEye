@@ -23,7 +23,7 @@
 
     <div class="row service-container" >
         <div class="col-sm-6" *ngFor="let item of services">
-            <div class="service-card" data-aos="slide-up">
+            <div class="service-card" data-aos="slide-up" [routerLink]="item.link">
                 <span class="wrapper">
                     <p class="service-count">{{item.count}}</p>
                     <span class="text" [innerHTML]="item.innerText"></span>
@@ -97,7 +97,7 @@
     </span>
 
     <div class="wrapper">
-        <div class="box" *ngFor="let item of workWithUs" data-aos="slide-up">
+        <div class="box" *ngFor="let item of workWithUs" data-aos="slide-up" [routerLink]="item.link">
             <img [src]="item.imgSrc" [alt]="item.text">
             <div class="overlay"></div>
             <a>{{item.text}} <span>></span> </a>

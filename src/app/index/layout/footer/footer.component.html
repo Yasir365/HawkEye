@@ -11,25 +11,25 @@
 
     <div class="middle-sec">
         <div class="wrapper">
-            <ul>
+            <ul (click)="scroll()">
                 <li style="margin-bottom: 1.5rem;">Links</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
-                <li>Service & pricing</li>
-                <li>Truck Types</li>
-                <li>Terms Of Service</li>
+                <li routerLink="/careers" >About Us</li>
+                <li routerLink="/contact-us" >Contact Us</li>
+                <li routerLink="/services/truck-dispatching" >Service & pricing</li>
+                <li routerLink="/truck-type/dry-van" >Truck Types</li>
+                <!-- <li>Terms Of Service</li> -->
             </ul>
-            <ul>
-                <li style="margin-top: 3.5rem;">FAQ</li>
-                <li>How to start</li>
-                <li>Testimonials</li>
-                <li>Blogs</li>
-                <li>Privacy Policy</li>
+            <ul (click)="scroll()">
+                <li style="margin-top: 3.5rem;" routerLink="/FAQ">FAQ</li>
+                <li routerLink="/how-to-start">How to start</li>
+                <li routerLink="/testimonials">Testimonials</li>
+                <!-- <li>Blogs</li>
+                <li>Privacy Policy</li> -->
             </ul>
-            <ul>
+            <ul (click)="scroll()">
                 <li style="margin-bottom: 1.5rem;">Contacts</li>
-                <li><i class="fa-solid fa-phone"></i> (406)-4058608</li>
-                <li><i class="fa-solid fa-envelope"></i> info@hawkeyefreights.com</li>
+                <li><i class="fa-solid fa-phone"></i><a href="tel:(406)-4058608"> (406)-4058608 </a></li>
+                <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@hawkeyefreights.com">info@hawkeyefreights.com</a></li>
             </ul>
         </div>
     </div>
