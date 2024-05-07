@@ -10,8 +10,8 @@ export class SubscribersComponent implements OnInit {
   subscribers: any = [];
   loader = false;
   page = 1;
-  itemsPerPage = 10;
-  totalRecords = 15;
+  itemsPerPage = 15;
+  totalRecords = 0;
 
   constructor(private api: DataService) { }
 
