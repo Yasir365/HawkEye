@@ -55,6 +55,7 @@ body {
 
 .heading {
     font-family: ExpandedBold;
+
     .before {
         font-weight: 700;
         font-size: 3rem;
@@ -130,7 +131,7 @@ body {
     font-family: bold;
 
     h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin-bottom: 4rem;
 
         &::before {
@@ -196,7 +197,7 @@ body {
     font-weight: 700;
     font-size: 1.3rem;
     font-family: "Expanded", sans-serif;
-    
+
     @include max(768px) {
         width: 45%;
     }
@@ -243,6 +244,11 @@ body {
 }
 
 .faq {
+    h3 {
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+
     i.fa-plus {
         font-size: 1.5rem;
         cursor: pointer;
