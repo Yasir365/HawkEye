@@ -25,7 +25,7 @@ export class FormComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() {
+  onSubmit(form: any) {
     if (this.contactForm.invalid) {
       return
     }
@@ -34,6 +34,7 @@ export class FormComponent implements OnInit {
     data.agreed = data.agreed == 1 ? 1 : 0
     data.wantToReceiveNotifications = data.wantToReceiveNotifications == 1 ? 1 : 0
     this.loading = true;
+    form.resetForm();
     this.ds.saveContactUs(data).subscribe((res: any) => {
       if (res.success) {
         this.toastr.success('Form submitted successfully', 'Success');

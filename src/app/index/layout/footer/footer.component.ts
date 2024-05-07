@@ -23,6 +23,7 @@ export class FooterComponent implements OnInit {
     if (this.email.match(/^\s*$/) || this.email == null) return;
     this.api.saveSubscribers({ email: this.email }).subscribe((res: any) => {
       window.scrollTo(0, 0);
+      this.email = '';
       this.loader = false;
       if (res.success) {
         this.toastr.success("Successfully Subscribed", 'Success');
