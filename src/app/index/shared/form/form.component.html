@@ -8,7 +8,7 @@
     </div>
     
     <label class="mt-2">Phone number <span class="error">*</span></label>
-    <input type="number" class="form-control" formControlName="phone" [ngClass]="{ 'form-submitted': f.submitted }" >
+    <input type="number" class="form-control" formControlName="phone" [ngClass]="{ 'form-submitted': f.submitted }" placeholder="(406)-4058608">
     <div *ngIf="validator.checkErrors(g['phone'], f)" class="error">
       <p *ngIf="g['phone'].errors?.['required']">Phone Number is required.</p>
     </div>
