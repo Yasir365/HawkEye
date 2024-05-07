@@ -226,11 +226,16 @@
             font-family: Logity, sans-serif;
         }
 
+        hr{
+            margin: 5rem 0 3rem 0;
+        }
+
         ul li {
             padding: 10px;
             display: flex;
             justify-content: space-between;
             position: relative;
+            line-height: 2;
 
             &:hover {
                 span:nth-child(1) {
@@ -243,6 +248,9 @@
                 }
             }
 
+            span{
+                font-weight: 600;
+            }
 
             span:nth-child(1) {
                 width: 100%;
