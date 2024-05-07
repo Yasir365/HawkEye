@@ -127,7 +127,7 @@ body {
 
 .breadcrumbs {
     position: relative;
-    font-family: ExpandedBold;
+    font-family: bold;
 
     h1 {
         font-size: 4rem;
@@ -193,7 +193,10 @@ body {
     text-align: center;
     padding: 6px 0;
     cursor: pointer;
-
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-family: "Expanded", sans-serif;
+    
     @include max(768px) {
         width: 45%;
     }
@@ -216,6 +219,9 @@ body {
     text-align: center;
     padding: 6px 0;
     cursor: pointer;
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-family: "Expanded", sans-serif;
 
     @include max(768px) {
         width: 45%;
