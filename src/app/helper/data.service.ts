@@ -20,9 +20,9 @@ export class DataService {
   saveContactUs(data: any) {
     return this.http.post(this.baseUrl + '/public/contact-us/add', data);
   }
-  
+
   getContactUs(params: any) {
-    return this.http.get<any>(`${this.baseUrl}/admin/contact-us/list?page=${params.page}&perPage=${params.perPage}`);
+    return this.http.get<any>(`${this.baseUrl}/admin/contact-us/list?page=${params.page}&perPage=${params.perPage}&name=${params.name}&email=${params.email}`);
   }
 
   saveSubscribers(data: any) {
@@ -33,7 +33,7 @@ export class DataService {
     return this.http.get<any>(`${this.baseUrl}/admin/subscriber/list?page=${params.page}&perPage=${params.perPage}`);
   }
 
-  getCount(){
+  getCount() {
     return this.http.get(this.baseUrl + '/admin/subscriber/count');
   }
 }

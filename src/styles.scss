@@ -153,7 +153,19 @@ body {
 
 }
 
-.turck {
+.tick {
+    margin: 2rem 1rem;
+
+    @include max(425px) {
+        margin: 1rem 0.5rem;
+    }
+
+    i {
+        margin-right: 8px;
+    }
+}
+
+.turck_link {
     width: 20%;
     background-color: red;
     color: white;
@@ -172,35 +184,6 @@ body {
 
     &:hover {
         background-color: #000;
-    }
-
-}
-
-.tick {
-    margin: 2rem 1rem;
-
-    @include max(425px) {
-        margin: 1rem 0.5rem;
-    }
-
-    i {
-        margin-right: 8px;
-    }
-}
-
-.faq {
-    i.fa-plus {
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: red;
-        font-weight: 900;
-    }
-
-    i.fa-minus {
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: black;
-        font-weight: 900;
     }
 
 }
@@ -231,4 +214,36 @@ body {
 
 .error p {
     color: red;
+}
+
+.faq {
+    i.fa-plus {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: red;
+        font-weight: 900;
+    }
+
+    i.fa-minus {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: black;
+        font-weight: 900;
+    }
+
+}
+
+.loader1 {
+    width: 40px;
+    margin: 8px 0 0 3px;
+    aspect-ratio: 4;
+    background: radial-gradient(circle closest-side, #ffffff 90%, #0000) 0/calc(100%/3) 100% space;
+    clip-path: inset(0 100% 0 0);
+    animation: l1 1s steps(4) infinite;
+}
+
+@keyframes l1 {
+    to {
+        clip-path: inset(0 -34% 0 0)
+    }
 }
