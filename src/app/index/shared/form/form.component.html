@@ -1,5 +1,5 @@
 <form id="contactForm1" #f="ngForm" [formGroup]="contactForm" (ngSubmit)="onSubmit(f)" style="background-color: #fff; padding: 40px 30px;">
-    <h3>Contact us for free setup</h3>
+    <h4 class="mb-1" style="font-weight: 700; line-height: 1.5;">Contact us for free setup</h4>
 
     <label>Full Name <span class="error">*</span></label>
     <input type="text" class="form-control" formControlName="name" [ngClass]="{ 'form-submitted': f.submitted }" >
