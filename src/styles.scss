@@ -11,22 +11,22 @@
 }
 
 @font-face {
-    font-family: 'Logity-Bold';
+    font-family: 'Bold';
     src: url("assets/fonts/subset-Logity-Bold.woff2");
 }
 
 @font-face {
-    font-family: 'Logity-ExpandedBold';
+    font-family: 'ExpandedBold';
     src: url("assets/fonts/subset-Logity-ExpandedBold.woff2");
 }
 
 @font-face {
-    font-family: 'Logity-SemiExpandedBold';
+    font-family: 'SemiExpandedBold';
     src: url("assets/fonts/subset-Logity-SemiExpandedBold.woff2");
 }
 
 @font-face {
-    font-family: 'Logity-Regular';
+    font-family: 'Regular';
     src: url("assets/fonts/subset-Logity-Regular.woff2");
 }
 
@@ -50,10 +50,11 @@ ul {
 body {
     background: #EEF0F3;
     overflow-x: hidden;
+    font-family: Regular;
 }
 
 .heading {
-    font-family: Logity-ExpandedBold;
+    font-family: ExpandedBold;
     .before {
         font-weight: 700;
         font-size: 3rem;
@@ -126,6 +127,7 @@ body {
 
 .breadcrumbs {
     position: relative;
+    font-family: ExpandedBold;
 
     h1 {
         font-size: 4rem;
