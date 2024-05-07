@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     return this.loginForm.controls
   }
 
-  onSubmit(form: FormGroup) {
+  onSubmit(form: any) {
     this.loading = true;
     if(this.loginForm.invalid){
       this.loading = false;
@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
     }
 
     let data = this.loginForm.getRawValue();
+    form.resetForm();
     this.api.login(data).subscribe((res:any)=>{
       if(res.success){
         localStorage.setItem('token',res.data.token)

@@ -29,7 +29,7 @@ export class ChangePasswordComponent implements OnInit {
     return this.changePasswordForm.controls;
   }
 
-  onSubmit(){
+  onSubmit(form:any){
     if(this.changePasswordForm.invalid){
       return
     }
@@ -45,6 +45,7 @@ export class ChangePasswordComponent implements OnInit {
     this.loading = true;
 
     let obj = this.changePasswordForm.getRawValue();
+    form.resetForm();
     this.api.changePassword(obj).subscribe((res:any)=>{
       this.loading = false;
       if(res.success){
