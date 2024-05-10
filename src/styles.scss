@@ -242,6 +242,16 @@ body {
     color: red;
 }
 
+h3 {
+    margin-bottom: 3rem;
+    font-weight: 700;
+    line-height: 1.5;
+
+    @include max(425px) {
+        font-size: 1rem;
+    }
+}
+
 .faq {
     h3 {
         font-weight: 700;
@@ -277,10 +287,4 @@ body {
     to {
         clip-path: inset(0 -34% 0 0)
     }
-}
-
-h3 {
-    margin-bottom: 3rem;
-    font-weight: 700;
-    line-height: 1.5;
 }
