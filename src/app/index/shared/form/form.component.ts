@@ -36,6 +36,7 @@ export class FormComponent implements OnInit {
     this.loading = true;
     form.resetForm();
     this.ds.saveContactUs(data).subscribe((res: any) => {
+      this.loading = false;
       if (res.success) {
         this.toastr.success('Form submitted successfully', 'Success');
       } else {
