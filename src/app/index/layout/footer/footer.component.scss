@@ -1,7 +1,6 @@
 footer {
     width: 100%;
     background: #000;
-    // padding: 30px 0;
 
     .top-sec {
         width: 100%;
@@ -26,7 +25,7 @@ footer {
                 margin-bottom: 2rem;
 
                 input {
-                    flex: 1;
+                    width: 420px;
                     padding: 7px 10px;
                 }
 
@@ -86,6 +85,10 @@ footer {
         width: 100%;
     }
 
+    h3{
+        font-size: 16px;
+    }
+
     footer .middle-sec .wrapper .logo,
     footer .middle-sec .wrapper .logo img {
         width: 100% !important;
@@ -98,5 +101,9 @@ footer {
     footer .middle-sec ul {
         width: 100%;
     }
+
+    input{
+width: 190px !important;    
+}
 
 }

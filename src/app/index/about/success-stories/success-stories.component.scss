@@ -1,3 +1,10 @@
+@mixin max($max-width) {
+    @media screen and (max-width: #{$max-width}) {
+        @content;
+    }
+}
+
+
 .content-wrapper {
 
     h1 {
@@ -5,6 +12,13 @@
         font-size: 3.5rem;
         line-height: 1.5;
         font-weight: 700;
+
+        @include max(769px) {
+            font-size: 2rem;
+        }
+        @include max(426px) {
+            font-size: 1.3rem;
+        }
     }
 
 }
