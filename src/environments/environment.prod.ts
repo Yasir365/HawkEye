@@ -1,8 +1,7 @@
 export const environment = {
   production: true,
-  baseUrl: "https://apii.codewithshahid.tech/api",
+  baseUrl: 'https://api.hawkeyefreights.com/public/api',
 };
-
 
 /**
  *
