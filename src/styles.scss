@@ -343,3 +343,51 @@ h3 {
         clip-path: inset(0 -34% 0 0)
     }
 }
+
+.modal-content{
+
+    .close {
+        top: 10px;
+        right: 10px;
+        position: absolute;
+        cursor: pointer;
+        color: red;
+        z-index: 9999;
+        border: none;
+        background: #fff;
+        z-index: 9999;
+        
+        &:hover{
+          color: black;
+        }
+    
+        i{
+          font-size: 1.5rem;
+    
+        }
+    }
+}
+
+
+.index-container{
+        position: relative;
+        min-height: 100vh;
+      
+      .chat {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #013d7d;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 11px 15px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      
+      .chat {
+        z-index: 1;
+      }
+      
+}

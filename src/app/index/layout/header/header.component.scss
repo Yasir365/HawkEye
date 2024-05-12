@@ -82,7 +82,7 @@
                     }
 
                     @include max (769px) {
-                        padding: 8px;
+                        padding: 8px 8px 8px 0px !important;
                         // color: #ffffff;
                     }
 

@@ -1,0 +1,22 @@
+
+<div class="index-container">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+  <button class="chat" routerLink="/contact-us"><i class="fa-solid fa-phone-volume"></i></button>
+</div>
+
+
+<button type="button" id="callModalbutton" class="btn btn-primary" data-toggle="modal" data-target="#callModal" style="display: none;"></button>
+<div class="modal fade" id="callModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="callModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModal"> <span aria-hidden="true"><i class="fa fa-times-circle" aria-hidden="true"></i></span> </button>
+      <div class="modal-body">
+        <h3 class="text-center">Request a callback from US</h3>
+        <p class="text-center">Enter your phone number and we will call you back in 30 seconds!</p>
+
+      </div>
+    </div>
+  </div>
+</div>
