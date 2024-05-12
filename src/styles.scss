@@ -187,6 +187,7 @@ body {
 
 .turck_link {
     width: 20%;
+    transition: 0.3s ease-in-out;
     background-color: red;
     color: white;
     margin: 15px;
@@ -213,6 +214,7 @@ body {
 
 .service-link {
     width: 20%;
+    transition: 0.3s ease-in-out;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     margin: 15px;
@@ -234,6 +236,58 @@ body {
     &:hover {
         background-color: #000;
         color: #fff;
+    }
+
+}
+
+.started-link {
+    width: 30%;
+    transition: 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 15px;
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-family: "Expanded", sans-serif;
+
+    a{
+        transition: 0.3s ease-in-out;
+        width: 100%;
+        color: #000;
+        
+    }
+    
+    &:nth-child(1){
+        transition: 0.3s ease-in-out;
+        background-color: red;
+        color: #fff;
+        width: 25%;
+    }
+    
+    @include max(768px) {
+        width: 45%;
+        &:nth-child(1){
+            width: 45%;
+        }
+    }
+    
+    @include max(426px) {
+        width: 100%;
+        &:nth-child(1){
+            width: 100%;
+        }
+    }
+
+    &:hover {
+        background-color: #000000;
+        color: #fff;
+
+        a {
+            color: #fff;
+        }
     }
 
 }
