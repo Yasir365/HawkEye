@@ -82,6 +82,8 @@
         display: flex;
         justify-content: space-between;
         padding-top: 3rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
 
         .service-card {
             margin-bottom: 20px;
@@ -91,7 +93,7 @@
             min-height: 200px;
             justify-content: space-between;
             color: #fff;
-            padding: 20px;
+            padding: 25px;
             position: relative;
             cursor: pointer;
 
@@ -134,7 +136,7 @@
 
                 .text {
                     font-weight: 700;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                 }
             }
 
