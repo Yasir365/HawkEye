@@ -53,7 +53,8 @@
             background-color: red;
             display: inline-block;
             color: #fff;
-
+            font-size: 1.5rem;
+            font-weight: 700;
             @include max(426px) {
                 margin-bottom: 10px;
             }
