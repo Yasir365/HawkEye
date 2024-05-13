@@ -17,10 +17,10 @@ export class TruckDispatchingComponent implements OnInit {
   faq8 = false;
 
   customOptions1: OwlOptions = {
-    dots: true,
+    dots: false,
     nav: true,
     margin: 30,
-    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    navText: ['<i class="fa-solid fa-less-than"></i>', '<i class="fa-solid fa-greater-than"></i>'],
     autoplay: true,
     loop: true,
     navSpeed: 700,

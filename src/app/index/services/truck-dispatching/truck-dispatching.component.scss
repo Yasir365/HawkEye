@@ -97,7 +97,39 @@
         }
     }
 
-    .owl-1 {}
+    .owl-1 {
+        ::ng-deep .owl-theme .owl-nav {
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-155px);
+        }
+
+        ::ng-deep .owl-theme .owl-nav [class*=owl-] {
+            font-size: 26px;
+            height: 40px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            font-family: monospace;
+            justify-content: center;
+            border-radius: 100px;
+            background: transparent;
+            color: #a91212;
+            font-size: 4.5rem;
+
+            &:nth-child(1) {
+                transform: translateX(-80px);
+            }
+
+            &:nth-child(2) {
+                transform: translateX(80px);
+            }
+
+            &:hover {
+                color: red;
+            }
+        }
+    }
 
     .owl-2 {
         ::ng-deep .owl-theme {
