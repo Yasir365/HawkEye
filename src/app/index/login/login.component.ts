@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { DataService } from 'src/app/helper/data.service';
 import { formValidation } from 'src/app/helper/form-validation';
 
@@ -12,9 +13,8 @@ import { formValidation } from 'src/app/helper/form-validation';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   loading: boolean = false;
-  loginError: boolean = false;
 
-  constructor(public validator: formValidation, private fb: FormBuilder, private api: DataService, private router: Router) {
+  constructor(public validator: formValidation, private fb: FormBuilder, private api: DataService, private router: Router, private toaster: ToastrService) {
     this.loginForm = this.fb.group({
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required]),
@@ -41,10 +41,11 @@ export class LoginComponent implements OnInit {
     this.api.login(data).subscribe((res: any) => {
       this.loading = false;
       if (res.success) {
+        this.toaster.success('Login Successfully', 'Success');
         localStorage.setItem('token', res.data.token)
         this.router.navigate(['/admin']);
       } else {
-        this.loginError = true;
+        this.toaster.error('Invalid Email or Password', 'Error');
       }
     })
   }
