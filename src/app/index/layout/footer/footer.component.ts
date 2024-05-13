@@ -30,11 +30,13 @@ export class FooterComponent implements OnInit {
   }
 
   subscribe() {
-    this.loader = true;
     if (this.email == '') return;
-    if (this.email.match(/^\s*$/) || this.email == null) return;
+    if (this.validateEmail(this.email) == false) {
+      this.toastr.error("Invalid Email", 'Error');
+      return;
+    }
+    this.loader = true;
     this.api.saveSubscribers({ email: this.email }).subscribe((res: any) => {
-      window.scrollTo(0, 0);
       this.email = '';
       this.loader = false;
       if (res.success) {
@@ -45,6 +47,12 @@ export class FooterComponent implements OnInit {
       }
     })
   }
+
+  validateEmail(email: any) {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
+
 
   scroll() {
     window.scrollTo(0, 0);

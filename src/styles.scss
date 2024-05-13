@@ -51,6 +51,11 @@ body {
     overflow-x: hidden;
 }
 
+.toast-container {
+    position: fixed !important;
+    top: 70px;
+}
+
 .heading {
     font-family: ExpandedBold;
 

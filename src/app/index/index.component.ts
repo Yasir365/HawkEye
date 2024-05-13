@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { filter } from 'rxjs';
 
 @Component({
@@ -9,7 +10,7 @@ import { filter } from 'rxjs';
 export class IndexComponent implements OnInit {
   isFooter: boolean = true;
 
-  constructor(private route: Router,) {
+  constructor(private route: Router, private toaster: ToastrService) {
     const routeExceptions = ['/login',]
 
     this.route.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
@@ -33,6 +34,7 @@ export class IndexComponent implements OnInit {
     setTimeout(() => {
       // closeModal?.click();
     }, 10000);
+
   }
 
 }

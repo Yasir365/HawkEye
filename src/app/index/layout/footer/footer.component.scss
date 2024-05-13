@@ -1,3 +1,9 @@
+@mixin max($max-width) {
+    @media screen and (max-width: #{$max-width}) {
+        @content;
+    }
+}
+
 footer {
     width: 100%;
     background: #000;
@@ -19,10 +25,22 @@ footer {
             }
 
             .wrapper-form {
-                width: 45%;
+                width: 30%;
                 margin: auto;
                 display: flex;
                 margin-bottom: 2rem;
+
+                @include max(1024px) {
+                    width: 45%;
+                }
+
+                @include max(768px) {
+                    width: 55%;
+                }
+
+                @include max(425px) {
+                    width: 100%;
+                }
 
                 input {
                     width: 100%;
