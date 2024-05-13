@@ -4,6 +4,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-truck-dispatching',
   templateUrl: './truck-dispatching.component.html',
+  styleUrls: ['./truck-dispatching.component.scss']
 })
 export class TruckDispatchingComponent implements OnInit {
   faq1 = false;
@@ -42,7 +43,7 @@ export class TruckDispatchingComponent implements OnInit {
     dots: true,
     nav: true,
     margin: 30,
-    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    navText: ['<img src= "assets/left.svg" />', '<img src= "assets/right.svg" />'],
     autoplay: true,
     loop: true,
     navSpeed: 700,

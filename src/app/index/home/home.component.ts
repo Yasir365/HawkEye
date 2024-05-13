@@ -19,12 +19,12 @@ export class HomeComponent implements OnInit {
     dots: true,
     nav: true,
     margin: 30,
-    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    navText: ['<img src= "assets/left.svg" />', '<img src= "assets/right.svg" />'],
     autoplay: true,
     loop: true,
     navSpeed: 700,
     autoplaySpeed: 1000,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 9000,
     responsive: {
       0: {
         items: 1

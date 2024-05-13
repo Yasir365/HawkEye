@@ -87,6 +87,7 @@
   <span class="heading">
     <h2 class="before text-white" data-aos="fade-right"> Who can <br> work with us</h2>
   </span>
+  <span class="owl-1">
     <owl-carousel-o [options]="customOptions1">
       <ng-template carouselSlide *ngFor="let item of workWithUs">
         <div class="wrapper" [routerLink]="item.link">
@@ -98,24 +99,29 @@
         </div>
       </ng-template>  
     </owl-carousel-o>
-
-    <div style="margin-bottom: 4rem;" class="d-lg-block d-none"></div>
-
-  <span class="d-flex justify-content-between heading">
-    <span class="heading">
-      <h2 class="before text-white" data-aos="fade-right">Testimonials</h2>        
-    </span>
-    <a routerLink="/testimonials" style="color: red;">Testimonials &nbsp;&nbsp;+</a>
   </span>
-  <owl-carousel-o [options]="customOptions2" >
-    <ng-template carouselSlide *ngFor="let item of testimonials">
-      <div class="txt">
-          <h1>{{item.name}}</h1>
-          <h3>{{item.sr_no}}</h3>
-          <p>{{item.description}}</p>
-      </div>
-    </ng-template>  
-  </owl-carousel-o>
+  
+  <div style="margin-bottom: 4rem;" class="d-lg-block d-none"></div>
+  
+  <span class="owl-2">
+    <span class="d-flex justify-content-between heading">
+      <span class="heading">
+        <h2 class="before text-white" data-aos="fade-right">Testimonials</h2>        
+      </span>
+      <a routerLink="/testimonials" style="color: red;">Testimonials &nbsp;&nbsp;+</a>
+    </span>
+    <owl-carousel-o [options]="customOptions2" >
+      <ng-template carouselSlide *ngFor="let item of testimonials">
+        <div class="txt">
+            <h1>{{item.name}}</h1>
+            <h3>{{item.sr_no}}</h3>
+            <p>{{item.description}}</p>
+        </div>
+      </ng-template>  
+    </owl-carousel-o>
+  </span>
+
+
 </div>
 
 
