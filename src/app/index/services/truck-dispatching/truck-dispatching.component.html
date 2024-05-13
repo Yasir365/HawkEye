@@ -80,84 +80,136 @@
     <p>Reach out to our team today and get a quote or discover more about how our dispatch services go above and beyond your requirements. Use the contact details below and get in touch with our team by phone or email.</p>
     <p>We are all about taking care of details such as truck dispatching. This means you just need to focus on driving and delivery.</p>
 
+</section>
+
+
+<div class="sliders pad">
+  <span class="heading">
+    <h2 class="before text-white" data-aos="fade-right"> Who can <br> work with us</h2>
+  </span>
+    <owl-carousel-o [options]="customOptions1">
+      <ng-template carouselSlide *ngFor="let item of workWithUs">
+        <div class="wrapper" [routerLink]="item.link">
+          <div class="box">
+              <img [src]="item.imgSrc" [alt]="item.text">
+              <div class="overlay"></div>
+              <a>{{item.text}} <span>></span> </a>
+          </div>
+        </div>
+      </ng-template>  
+    </owl-carousel-o>
+
+    <div style="margin-bottom: 4rem;" class="d-lg-block d-none"></div>
+
+  <span class="d-flex justify-content-between heading">
+    <span class="heading">
+      <h2 class="before text-white" data-aos="fade-right">Testimonials</h2>        
+    </span>
+    <a routerLink="/testimonials" style="color: red;">Testimonials &nbsp;&nbsp;+</a>
+  </span>
+  <owl-carousel-o [options]="customOptions2" >
+    <ng-template carouselSlide *ngFor="let item of testimonials">
+      <div class="txt">
+          <h1>{{item.name}}</h1>
+          <h3>{{item.sr_no}}</h3>
+          <p>{{item.description}}</p>
+      </div>
+    </ng-template>  
+  </owl-carousel-o>
+</div>
 
 
 
 
 
 
+<section class="pad">
+  <div class="faq mt-5">
+    <h3 class="mb-0">FAQ</h3>
+    <hr>
 
-
-
-    <div class="faq mt-5">
-      <h3 class="mb-0">FAQ</h3>
-      <hr>
+    <div class="d-flex justify-content-between">
+      <h3>What will Hawkeye Freights and Dispatch services do for my business?</h3>
+      <span *ngIf="!faq1" (click)="toggleCollapse('faq1')"><i class="fa-solid fa-plus"></i></span>
+      <span *ngIf="faq1" (click)="toggleCollapse('faq1')"><i class="fa-solid fa-minus"></i></span>
+    </div>
+    <div class="collapse" [ngClass]="{ 'show': faq1 }">Very simply, we buy you time so you can make more money. Most owners/operators get into this business to drive loads and make money, then find themselves bogged down by all the paperwork, regulatory requirements, and negotiations — things that keep you from doing what makes you money. By taking on all the business support activities you would like to offload, Hawkeye Freights & Dispatch allows your business to run efficiently — and for you to take on more loads. In addition, when it comes to negotiating, we aim to get you the best rates for your loads, so you get to put more money in your pocket.</div>
+    <hr> 
   
-      <div class="d-flex justify-content-between">
-        <h3>What will Hawkeye Freights and Dispatch services do for my business?</h3>
-        <span *ngIf="!faq1" (click)="toggleCollapse('faq1')"><i class="fa-solid fa-plus"></i></span>
-        <span *ngIf="faq1" (click)="toggleCollapse('faq1')"><i class="fa-solid fa-minus"></i></span>
-      </div>
-      <div class="collapse" [ngClass]="{ 'show': faq1 }">Very simply, we buy you time so you can make more money. Most owners/operators get into this business to drive loads and make money, then find themselves bogged down by all the paperwork, regulatory requirements, and negotiations — things that keep you from doing what makes you money. By taking on all the business support activities you would like to offload, Hawkeye Freights & Dispatch allows your business to run efficiently — and for you to take on more loads. In addition, when it comes to negotiating, we aim to get you the best rates for your loads, so you get to put more money in your pocket.</div>
-      <hr> 
-    
-      <div class="d-flex justify-content-between">
-        <h3>Isn't it always easier and cheaper to hire an in-house dispatcher?</h3>
-        <span *ngIf="!faq2" (click)="toggleCollapse('faq2')" ><i class="fa-solid fa-plus"></i></span>
-        <span *ngIf="faq2" (click)="toggleCollapse('faq2')" ><i class="fa-solid fa-minus"></i></span>  </div>
-      <div class="collapse" [ngClass]="{ 'show': faq2}">Surprisingly, no. If you want to recruit capable and competent talent, you need to develop and undergo a pretty vigorous recruitment process, which takes time and — if you need the services of headhunters — money. Even if you find what you are looking for, you will most likely need to provide office space — yet another expenditure — and in some cases, further training. Meanwhile, as many of our clients have admitted, hiring Hawkeye Freights & Dispatch turns out to be more cost-effective than even having one full-time dispatcher. Our industry expertise, networks, and experience make us the best at what we do.</div>
-      <hr> 
-    
-      <div class="d-flex justify-content-between">
-        <h3>Do I have to enter into a long-term contract with Hawkeye Freights & Dispatch?</h3>
-        <span *ngIf="!faq3" (click)="toggleCollapse('faq3')" ><i class="fa-solid fa-plus"></i></span>
-        <span *ngIf="faq3" (click)="toggleCollapse('faq3')" ><i class="fa-solid fa-minus"></i></span>  </div>
-      <div class="collapse" [ngClass]="{ 'show': faq3}">Nope. You hire Hawkeye Freights & Dispatch on a month-to-month basis. We don't make trucker drivers commit long-term upfront because we believe in earning your business. If you aren't happy, we aren't happy, so we'll work hard for you. But we also believe that all business owners should have the freedom to work with whomever they want. It's important for us to keep that freedom for you.</div>
-      <hr> 
-    
-      <div class="d-flex justify-content-between">
-        <h3>How do I sign up with you, and what do I need?</h3>
-        <span *ngIf="!faq4" (click)="toggleCollapse('faq4')" ><i class="fa-solid fa-plus"></i></span>
-        <span *ngIf="faq4" (click)="toggleCollapse('faq4')" ><i class="fa-solid fa-minus"></i></span>  </div>
-      <div class="collapse" [ngClass]="{ 'show': faq4}">
-        Signing up with Hawkeye Freights & Dispatch is a breeze since you can submit documents to us online.
-        <p class="mt-2">- First, you sign our Dispatch Carrier Agreement, a document that clearly sets out our responsibilities and our responsibilities. This is meant to protect both of us — it is not a long-term service contract by any means. Our services are month-to-month, and you are not penalized for discontinuing our service.</p>
-        <p>- You will also need insurance that names Hawkeye Freights & Dispatch as the certificate holder. This is common industry practice for shippers, dispatchers, and brokers — it just allows us to conduct business at your behest and on your behalf when you want us to. Make sure the insurance sets out liability as well as cargo coverage.</p>
-        <p>- We also need the Carrier Set-Up Package and references for the shippers and brokers we work with and for our records. Your MC Permit and signed W9 form should be here as well.</p>
-        <p>- At Hawkeye Freights & Dispatch, we keep impeccable and accurate records — and always maintain compliance with all safety, regulatory, and industry requirements — so we also need a copy of the CDL for each driver we will be dispatching.</p>
-      </div>
-      <hr> 
-    
-      <div class="d-flex justify-content-between">
-        <h3>Do I have to be working under my own MC authority to hire Hawkeye Freights & Dispatch?</h3>
-        <span *ngIf="!faq5" (click)="toggleCollapse('faq5')" ><i class="fa-solid fa-plus"></i></span>
-        <span *ngIf="faq5" (click)="toggleCollapse('faq5')" ><i class="fa-solid fa-minus"></i></span>  </div>
-      <div class="collapse" [ngClass]="{ 'show': faq5}">We work with owners/operators working under their own MC authorities — but also with carriers with company drivers.</div>
-      <hr> 
-    
-      <div class="d-flex justify-content-between">
-        <h3>Do I have to request insurance certificates every time?</h3>
-        <span *ngIf="!faq6" (click)="toggleCollapse('faq6')" ><i class="fa-solid fa-plus"></i></span>
-        <span *ngIf="faq6" (click)="toggleCollapse('faq6')" ><i class="fa-solid fa-minus"></i></span>  </div>
-      <div class="collapse" [ngClass]="{ 'show': faq6}">No. Unless you have specifically instructed your insurance agent to process the certificate requests made by "the insured only" — you — we work with your insurance agent to get the insurance certificates with the certificate holder information.</div>
-      <hr> 
-    
-      <div class="d-flex justify-content-between">
-        <h3>Will you work with me if I'm new to the business?</h3>
-        <span *ngIf="!faq7" (click)="toggleCollapse('faq7')" ><i class="fa-solid fa-plus"></i></span>
-        <span *ngIf="faq7" (click)="toggleCollapse('faq7')" ><i class="fa-solid fa-minus"></i></span>  </div>
-      <div class="collapse" [ngClass]="{ 'show': faq7}">Absolutely. We love helping truck drivers and carriers in all stages of their careers. What we look for are keen, hardworking drivers, period. Realistically, if you are a new carrier, it may initially be harder for us to find you the best loads because most shippers and brokers prefer carriers with MC authorities more than six months to a year old. However, you can rest assured that Hawkeye Freights & Dispatch will give it our all so you can make better money in your first year. Once you hit the one-year milestone, access to better rates and loads will be even easier.</div>
-      <hr> 
-    
-      <div class="d-flex justify-content-between">
-        <h3>Can I choose which Hawkeye Freights & Dispatch services I want?</h3>
-        <span *ngIf="!faq8" (click)="toggleCollapse('faq8')" ><i class="fa-solid fa-plus"></i></span>
-        <span *ngIf="faq8" (click)="toggleCollapse('faq8')" ><i class="fa-solid fa-minus"></i></span>  </div>
-      <div class="collapse" [ngClass]="{ 'show': faq8}">
-        Yes. Many of our clients love our comprehensive service package — which includes dispatch, documentation, compliance, and all the business supports a carrier’s needs — but we also have clients who, say, just want assistance with documentation and paperwork. At Hawkeye Freights & Dispatch, we believe our clients should have the freedom to do business as they see fit. After all, no one knows their business better than they do.
-        <p>Have any other questions? Please don't hesitate to talk to us. We look forward to helping you grow your trucking business.</p>
-      </div>
+    <div class="d-flex justify-content-between">
+      <h3>Isn't it always easier and cheaper to hire an in-house dispatcher?</h3>
+      <span *ngIf="!faq2" (click)="toggleCollapse('faq2')" ><i class="fa-solid fa-plus"></i></span>
+      <span *ngIf="faq2" (click)="toggleCollapse('faq2')" ><i class="fa-solid fa-minus"></i></span>  </div>
+    <div class="collapse" [ngClass]="{ 'show': faq2}">Surprisingly, no. If you want to recruit capable and competent talent, you need to develop and undergo a pretty vigorous recruitment process, which takes time and — if you need the services of headhunters — money. Even if you find what you are looking for, you will most likely need to provide office space — yet another expenditure — and in some cases, further training. Meanwhile, as many of our clients have admitted, hiring Hawkeye Freights & Dispatch turns out to be more cost-effective than even having one full-time dispatcher. Our industry expertise, networks, and experience make us the best at what we do.</div>
+    <hr> 
+  
+    <div class="d-flex justify-content-between">
+      <h3>Do I have to enter into a long-term contract with Hawkeye Freights & Dispatch?</h3>
+      <span *ngIf="!faq3" (click)="toggleCollapse('faq3')" ><i class="fa-solid fa-plus"></i></span>
+      <span *ngIf="faq3" (click)="toggleCollapse('faq3')" ><i class="fa-solid fa-minus"></i></span>  </div>
+    <div class="collapse" [ngClass]="{ 'show': faq3}">Nope. You hire Hawkeye Freights & Dispatch on a month-to-month basis. We don't make trucker drivers commit long-term upfront because we believe in earning your business. If you aren't happy, we aren't happy, so we'll work hard for you. But we also believe that all business owners should have the freedom to work with whomever they want. It's important for us to keep that freedom for you.</div>
+    <hr> 
+  
+    <div class="d-flex justify-content-between">
+      <h3>How do I sign up with you, and what do I need?</h3>
+      <span *ngIf="!faq4" (click)="toggleCollapse('faq4')" ><i class="fa-solid fa-plus"></i></span>
+      <span *ngIf="faq4" (click)="toggleCollapse('faq4')" ><i class="fa-solid fa-minus"></i></span>  </div>
+    <div class="collapse" [ngClass]="{ 'show': faq4}">
+      Signing up with Hawkeye Freights & Dispatch is a breeze since you can submit documents to us online.
+      <p class="mt-2">- First, you sign our Dispatch Carrier Agreement, a document that clearly sets out our responsibilities and our responsibilities. This is meant to protect both of us — it is not a long-term service contract by any means. Our services are month-to-month, and you are not penalized for discontinuing our service.</p>
+      <p>- You will also need insurance that names Hawkeye Freights & Dispatch as the certificate holder. This is common industry practice for shippers, dispatchers, and brokers — it just allows us to conduct business at your behest and on your behalf when you want us to. Make sure the insurance sets out liability as well as cargo coverage.</p>
+      <p>- We also need the Carrier Set-Up Package and references for the shippers and brokers we work with and for our records. Your MC Permit and signed W9 form should be here as well.</p>
+      <p>- At Hawkeye Freights & Dispatch, we keep impeccable and accurate records — and always maintain compliance with all safety, regulatory, and industry requirements — so we also need a copy of the CDL for each driver we will be dispatching.</p>
+    </div>
+    <hr> 
+  
+    <div class="d-flex justify-content-between">
+      <h3>Do I have to be working under my own MC authority to hire Hawkeye Freights & Dispatch?</h3>
+      <span *ngIf="!faq5" (click)="toggleCollapse('faq5')" ><i class="fa-solid fa-plus"></i></span>
+      <span *ngIf="faq5" (click)="toggleCollapse('faq5')" ><i class="fa-solid fa-minus"></i></span>  </div>
+    <div class="collapse" [ngClass]="{ 'show': faq5}">We work with owners/operators working under their own MC authorities — but also with carriers with company drivers.</div>
+    <hr> 
+  
+    <div class="d-flex justify-content-between">
+      <h3>Do I have to request insurance certificates every time?</h3>
+      <span *ngIf="!faq6" (click)="toggleCollapse('faq6')" ><i class="fa-solid fa-plus"></i></span>
+      <span *ngIf="faq6" (click)="toggleCollapse('faq6')" ><i class="fa-solid fa-minus"></i></span>  </div>
+    <div class="collapse" [ngClass]="{ 'show': faq6}">No. Unless you have specifically instructed your insurance agent to process the certificate requests made by "the insured only" — you — we work with your insurance agent to get the insurance certificates with the certificate holder information.</div>
+    <hr> 
+  
+    <div class="d-flex justify-content-between">
+      <h3>Will you work with me if I'm new to the business?</h3>
+      <span *ngIf="!faq7" (click)="toggleCollapse('faq7')" ><i class="fa-solid fa-plus"></i></span>
+      <span *ngIf="faq7" (click)="toggleCollapse('faq7')" ><i class="fa-solid fa-minus"></i></span>  </div>
+    <div class="collapse" [ngClass]="{ 'show': faq7}">Absolutely. We love helping truck drivers and carriers in all stages of their careers. What we look for are keen, hardworking drivers, period. Realistically, if you are a new carrier, it may initially be harder for us to find you the best loads because most shippers and brokers prefer carriers with MC authorities more than six months to a year old. However, you can rest assured that Hawkeye Freights & Dispatch will give it our all so you can make better money in your first year. Once you hit the one-year milestone, access to better rates and loads will be even easier.</div>
+    <hr> 
+  
+    <div class="d-flex justify-content-between">
+      <h3>Can I choose which Hawkeye Freights & Dispatch services I want?</h3>
+      <span *ngIf="!faq8" (click)="toggleCollapse('faq8')" ><i class="fa-solid fa-plus"></i></span>
+      <span *ngIf="faq8" (click)="toggleCollapse('faq8')" ><i class="fa-solid fa-minus"></i></span>  </div>
+    <div class="collapse" [ngClass]="{ 'show': faq8}">
+      Yes. Many of our clients love our comprehensive service package — which includes dispatch, documentation, compliance, and all the business supports a carrier’s needs — but we also have clients who, say, just want assistance with documentation and paperwork. At Hawkeye Freights & Dispatch, we believe our clients should have the freedom to do business as they see fit. After all, no one knows their business better than they do.
+      <p>Have any other questions? Please don't hesitate to talk to us. We look forward to helping you grow your trucking business.</p>
+    </div>
+  </div>
+
+  <div class="dispatch">
+    <span class="head">
+      <h2>From 5% of gross</h2>
+      <button routerLink="/contact-us">Contact Us</button>
+    </span>
+
+    <hr class="mt-5">
+    <div class="points">
+      <div> <i class="fa-solid fa-check text-danger" routerLink="/services/truck-dispatching"></i> <span class="ms-2">Dispatching</span> </div>
+      <div> <i class="fa-solid fa-check text-danger" routerLink="/services/billing"></i> <span class="ms-2">Billing</span> </div>
+      <div> <i class="fa-solid fa-check text-danger" routerLink="/services/document-management"></i> <span class="ms-2">Document Management & Paperwork</span> </div>
+      <div> <i class="fa-solid fa-check text-danger" routerLink="/services/factoring-services"></i> <span class="ms-2">Factoring service</span> </div>
+      <div> <i class="fa-solid fa-check text-danger" routerLink="/services/rate-negotiation"></i> <span class="ms-2">Rate negotiation</span> </div>
+
     </div>
 
 
+  </div>
 </section>
