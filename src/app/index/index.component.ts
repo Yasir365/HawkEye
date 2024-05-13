@@ -29,10 +29,10 @@ export class IndexComponent implements OnInit {
     let modal = document.getElementById('callModalbutton');
     let closeModal = document.getElementById('closeModal');
     setTimeout(() => {
-      modal?.click();
+      // modal?.click();
     }, 1000);
     setTimeout(() => {
-      closeModal?.click();
+      // closeModal?.click();
     }, 10000);
 
   }
