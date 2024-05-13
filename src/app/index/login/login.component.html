@@ -9,14 +9,14 @@
         <h1 class="text-center">Login</h1> 
         
         <label>Enter Email <span class="error">*</span></label>
-        <input type="email" class="form-control" formControlName="email">
+        <input type="email" class="form-control" formControlName="email" (input)="loginError=false">
         <div *ngIf="validator.checkErrors(g['email'], f)" class="error">
           <p *ngIf="g['email'].errors?.['required']">Email is required.</p>
           <p *ngIf="g['email'].errors?.['email']">Email is invalid.</p>
         </div>
 
         <label class="mt-2">Enter Password <span class="error">*</span></label>
-        <input type="password" class="form-control" formControlName="password">
+        <input type="password" class="form-control" formControlName="password" (input)="loginError=false">
         <div *ngIf="validator.checkErrors(g['password'], f)" class="error">
           <p *ngIf="g['password'].errors?.['required']">Password is required.</p>
         </div>
