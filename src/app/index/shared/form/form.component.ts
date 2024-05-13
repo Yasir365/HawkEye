@@ -40,7 +40,7 @@ export class FormComponent implements OnInit {
       if (res.success) {
         this.toastr.success('Form submitted successfully', 'Success');
       } else {
-        this.toastr.error(res.error.general, 'Error');
+        this.toastr.error("Something went wrong!", 'Error');
       }
       this.loading = false;
     })
