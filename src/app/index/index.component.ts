@@ -9,11 +9,11 @@ export class IndexComponent implements OnInit {
 
   ngOnInit() {
     let modal = document.getElementById('callModalbutton');
+    let closeModal = document.getElementById('closeModal');
     setTimeout(() => {
-      modal?.click();
+      // modal?.click();
     }, 1000);
     setTimeout(() => {
-      let closeModal = document.getElementById('closeModal');
       // closeModal?.click();
     }, 10000);
   }
