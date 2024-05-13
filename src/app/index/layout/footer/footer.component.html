@@ -7,6 +7,10 @@
                 <button type="submit" [disabled]="loader" (click)="subscribe()">Subscribe <div class="loader1" *ngIf="loader"></div> </button>
             </form>
         </div>
+
+        <div class="logo" *ngIf="islogo">
+            <img src="assets/logo.png" alt="">
+        </div>
     </div>
 
     <div class="middle-sec">

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { filter } from 'rxjs';
 import { DataService } from 'src/app/helper/data.service';
 
 @Component({
@@ -11,8 +13,18 @@ export class FooterComponent implements OnInit {
   loader = false;
   email = '';
   date = new Date().getFullYear();
-  
-  constructor(private api: DataService, private toastr: ToastrService) { }
+  islogo: boolean = false;
+
+  constructor(private api: DataService, private route: Router, private toastr: ToastrService,) {
+    const routeExceptions = ['/contact-us']
+    this.route.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+      let url: any = this.route.url.split('?')
+      if (url[0] != '') {
+        this.islogo = true
+      }
+    })
+
+  }
 
   ngOnInit() {
   }
@@ -34,7 +46,7 @@ export class FooterComponent implements OnInit {
     })
   }
 
-  scroll(){
+  scroll() {
     window.scrollTo(0, 0);
   }
 
