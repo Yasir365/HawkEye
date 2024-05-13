@@ -124,51 +124,20 @@
     </span>
 
 
-    <div class="wrapper">
-        <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselIndicators" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner">
-
-            <div class="carousel-item active">
-                <div class="wrap">
-                    <div class="img" >
-                        <img src="assets/testimonials.jpg" alt="">
-                    </div>
-                    <div class="txt">
-                        <h1>Jay Sanders</h1>
-                        <h3>MC # 104970</h3>
-                        <p>Place my trucking business in Hawkeye Freights & Dispatch's hands and haven't needed another dispatcher since. Outstanding Communication, very knowledgeable of the business, and they don't break the bank on percentage. Worth way more than other companies charging 10+ percent. Thank you, guys.</p>
-                    </div>
+    <owl-carousel-o [options]="customOptions" >
+        <ng-template carouselSlide *ngFor="let item of testimonials">
+            <div class="wrap">
+                <div class="img" >
+                    <img src="assets/testimonials.jpg" alt="">
+                </div>
+                <div class="txt">
+                    <h1>{{item.name}}</h1>
+                    <h3>{{item.sr_no}}</h3>
+                    <p>{{item.description}}</p>
                 </div>
             </div>
-            
-            <div class="carousel-item">
-                <div class="wrap">
-                    <div class="img">
-                        <img src="assets/testimonials.jpg" alt="">
-                    </div>
-                    <div class="txt">
-                        <h1>Sam Jose</h1>
-                        <h3>MC# 717422</h3>
-                        <p>Working with Hawkeye Freights & Dispatch has been a game-changer for our trucking business. Their personalized approach, attention to detail, and commitment to excellence have truly set them apart in the industry. The team at Hawkeye goes above and beyond to ensure our trucks are matched with the right loads, keeping our operations running smoothly and efficiently.</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+        </ng-template>  
+    </owl-carousel-o>
 
-        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only text-dark">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only text-dark">Next</span>
-        </a>
-        </div>
-    </div>
 
 </section>

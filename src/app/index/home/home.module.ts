@@ -4,7 +4,7 @@ import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { CountUpDirective } from './count-directive/count-up.directive';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 const routes: Routes = [
   { path: '', component: HomeComponent }
 ]
@@ -12,7 +12,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    CarouselModule
   ],
   declarations: [HomeComponent, CountUpDirective]
 })

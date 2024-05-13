@@ -55,6 +55,7 @@
             color: #fff;
             font-size: 1.5rem;
             font-weight: 700;
+
             @include max(426px) {
                 margin-bottom: 10px;
             }
@@ -76,8 +77,7 @@
 .services {
     position: relative;
 
-    @include max(425px) {
-    }
+    @include max(425px) {}
 
     .service-container {
         display: flex;
@@ -217,7 +217,7 @@
             font-weight: 600;
         }
 
-        .count-text{
+        .count-text {
             font-size: 1.5rem;
         }
     }
@@ -242,7 +242,7 @@
             font-family: Logity, sans-serif;
         }
 
-        hr{
+        hr {
             margin: 5rem 0 3rem 0;
         }
 
@@ -264,7 +264,7 @@
                 }
             }
 
-            span{
+            span {
                 font-weight: 600;
             }
 
@@ -394,31 +394,14 @@
     width: 100%;
     position: relative;
 
-    .wrapper {
+
+
+    .wrap {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         background-color: #000;
-        
 
-        .carousel-item{
-                transition: transform .6s ease-in-out;
-                position: relative;
-                display: hidden;
-                float: left;
-                width: 100%;
-                margin-right: -100%;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-
-            .wrap{
-                display: flex;
-            }
-        }
-
-        .active{
-            display: block;
-        }
 
         .img {
             width: 40%;
@@ -472,6 +455,50 @@
                 color: #fff;
             }
         }
+
     }
 
+}
+
+.owl-theme .owl-dots {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.owl-theme .owl-nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 100px;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    color: #000;
+    font-size: 26px;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background: #D9D9D9;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: #D9D9D9;
+    color: #000;
+}
+
+.owl-carousel .owl-nav .owl-next {
+    right: -20px !important;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+    left: -20px !important;
 }
