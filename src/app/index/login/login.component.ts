@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   loading: boolean = false;
   loginError: boolean = false;
 
-  constructor(public validator: formValidation, private fb: FormBuilder,private api:DataService,private router:Router) {
+  constructor(public validator: formValidation, private fb: FormBuilder, private api: DataService, private router: Router) {
     this.loginForm = this.fb.group({
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required]),
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    if(localStorage.getItem('token')) this.router.navigate(['/admin']);
+    if (localStorage.getItem('token')) this.router.navigate(['/admin']);
   }
 
   get g() {
@@ -31,21 +31,20 @@ export class LoginComponent implements OnInit {
 
   onSubmit(form: any) {
     this.loading = true;
-    if(this.loginForm.invalid){
+    if (this.loginForm.invalid) {
       this.loading = false;
       return
     }
 
     let data = this.loginForm.getRawValue();
     form.resetForm();
-    this.api.login(data).subscribe((res:any)=>{
-      if(res.success){
-        localStorage.setItem('token',res.data.token)
-        this.loading = false;
+    this.api.login(data).subscribe((res: any) => {
+      this.loading = false;
+      if (res.success) {
+        localStorage.setItem('token', res.data.token)
         this.router.navigate(['/admin']);
-      }else{
-        this.loading = false;
-        this.loginError= true;
+      } else {
+        this.loginError = true;
       }
     })
   }
