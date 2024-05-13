@@ -10,7 +10,7 @@ import { filter } from 'rxjs';
 export class IndexComponent implements OnInit {
   isFooter: boolean = true;
 
-  constructor(private route: Router, private toaster: ToastrService) {
+  constructor(private route: Router) {
     const routeExceptions = ['/login',]
 
     this.route.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
