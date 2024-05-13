@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', 
+    path: '',
     component: FAQComponent
   }
 ]
@@ -16,6 +16,6 @@ const routes: Routes = [
     RouterModule.forChild(routes)
 
   ],
-  declarations: [FAQComponent]
+  declarations: [FAQComponent],
 })
 export class FAQModule { }

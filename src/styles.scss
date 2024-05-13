@@ -126,7 +126,7 @@ body {
 
 .breadcrumbs {
     position: relative;
-    
+
     h1 {
         font-size: 3rem;
         font-family: SemiExpandedBold;
@@ -253,30 +253,32 @@ body {
     font-size: 1.3rem;
     font-family: "Expanded", sans-serif;
 
-    a{
+    a {
         transition: 0.3s ease-in-out;
         width: 100%;
         color: #000;
-        
+
     }
-    
-    &:nth-child(1){
+
+    &:nth-child(1) {
         transition: 0.3s ease-in-out;
         background-color: red;
         color: #fff;
         width: 25%;
     }
-    
+
     @include max(768px) {
         width: 45%;
-        &:nth-child(1){
+
+        &:nth-child(1) {
             width: 45%;
         }
     }
-    
+
     @include max(426px) {
         width: 100%;
-        &:nth-child(1){
+
+        &:nth-child(1) {
             width: 100%;
         }
     }
@@ -311,6 +313,7 @@ h3 {
     h3 {
         font-weight: 700;
         font-size: 1.3rem;
+        margin-bottom: 0;
     }
 
     i.fa-plus {
@@ -344,7 +347,7 @@ h3 {
     }
 }
 
-.modal-content{
+.modal-content {
 
     .close {
         top: 10px;
@@ -356,24 +359,24 @@ h3 {
         border: none;
         background: #fff;
         z-index: 9999;
-        
-        &:hover{
-          color: black;
+
+        &:hover {
+            color: black;
         }
-    
-        i{
-          font-size: 1.5rem;
-    
+
+        i {
+            font-size: 1.5rem;
+
         }
     }
 }
 
 
-.index-container{
-        position: relative;
-        min-height: 100vh;
-      
-      .chat {
+.index-container {
+    position: relative;
+    min-height: 100vh;
+
+    .chat {
         position: fixed;
         bottom: 20px;
         left: 20px;
@@ -384,10 +387,10 @@ h3 {
         padding: 11px 15px;
         font-size: 20px;
         cursor: pointer;
-      }
-      
-      .chat {
+    }
+
+    .chat {
         z-index: 1;
-      }
-      
+    }
+
 }
