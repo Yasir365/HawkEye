@@ -20,7 +20,7 @@ export class TruckDispatchingComponent implements OnInit {
     dots: false,
     nav: true,
     margin: 30,
-    navText: ['<i class="fa-solid fa-less-than"></i>', '<i class="fa-solid fa-greater-than"></i>'],
+    navText: ['<img src= "assets/vector1.png" />', '<img src= "assets/vector1.png" />'],
     autoplay: true,
     loop: true,
     navSpeed: 700,

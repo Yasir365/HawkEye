@@ -114,19 +114,20 @@
             justify-content: center;
             border-radius: 100px;
             background: transparent;
-            color: #a91212;
             font-size: 4.5rem;
+            opacity: 0.7;
 
             &:nth-child(1) {
-                transform: translateX(-80px);
+                transform: translateX(65px);
+                rotate: -180deg;
             }
 
             &:nth-child(2) {
-                transform: translateX(80px);
+                transform: translateX(68px);
             }
 
             &:hover {
-                color: red;
+                opacity: 1;
             }
         }
     }
