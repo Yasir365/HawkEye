@@ -4,6 +4,7 @@ import { CallBackComponent } from './call-back.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
+import { AdminSharedModule } from '../amin-shared/shared.module';
 
 const routes: Routes = [
   { path: '', component: CallBackComponent }
@@ -14,6 +15,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     NgxPaginationModule,
+    AdminSharedModule,
     RouterModule.forChild(routes)
   ],
   declarations: [CallBackComponent],

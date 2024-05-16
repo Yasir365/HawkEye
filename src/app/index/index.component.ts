@@ -23,24 +23,23 @@ export class IndexComponent implements OnInit {
       let url: any = this.route.url.split('?')
 
       if (routeExceptions.indexOf(url[0]) >= 0) {
-        this.isFooter = false
+        this.isFooter = false;
       } else {
         this.isFooter = true
+        let modal = document.getElementById('callModalbutton');
+        let closeModal = document.getElementById('closeModal');
+        setTimeout(() => {
+          modal?.click();
+        }, 1000);
+        setTimeout(() => {
+          closeModal?.click();
+        }, 10000);
       }
     })
   }
 
 
   ngOnInit() {
-    let modal = document.getElementById('callModalbutton');
-    let closeModal = document.getElementById('closeModal');
-    setTimeout(() => {
-      modal?.click();
-    }, 1000);
-    setTimeout(() => {
-      closeModal?.click();
-    }, 10000);
-
   }
 
   ngAfterViewInit() {
