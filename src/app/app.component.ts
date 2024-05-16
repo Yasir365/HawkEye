@@ -17,14 +17,14 @@ import * as AOS from 'aos';
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.5; /* Adjust opacity as needed */
-    z-index: 1000; /* Ensure it appears above other content */
+    opacity: 0.4;
+    z-index: 1000;
   }
 
   .watermark p {
-    font-size: 5rem; /* Adjust font size as needed */
+    font-size: 3rem;
     font-weight: 900;
-    color: blue; /* Adjust color as needed */
+    color: #1c128e;
   }
     `
   ]
