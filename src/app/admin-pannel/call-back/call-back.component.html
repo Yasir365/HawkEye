@@ -1,0 +1,12 @@
+<div class="wrapper mb-4" *ngIf="!loader">
+  <div class="card" *ngFor="let item of callbacks | paginate: { itemsPerPage: itemsPerPage, currentPage: page, totalItems: totalRecords }; let i = index">
+    <span>({{ (page - 1) * itemsPerPage + i + 1 }})</span>
+    <strong class="ms-2">{{item.phone}}</strong>
+  </div>
+</div>
+<pagination-controls *ngIf="!loader" (pageChange)="onPageChange($event)" [(ngModel)]="page" [itemsPerPage]="itemsPerPage"> </pagination-controls>
+
+
+<div class="loader" *ngIf="loader">
+  <img src="assets/loaderx.gif" alt="">
+</div>

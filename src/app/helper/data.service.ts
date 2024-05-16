@@ -36,4 +36,12 @@ export class DataService {
   getCount() {
     return this.http.get(this.baseUrl + '/admin/subscriber/count');
   }
+
+  saveCallback(data: any) {
+    return this.http.post(this.baseUrl + '/public/callback-number/add', data);
+  }
+
+  getCallback(params: any) {
+    return this.http.get(this.baseUrl + '/admin/callback-number/list', { params: params });
+  }
 }

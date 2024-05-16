@@ -3,6 +3,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { filter } from 'rxjs';
 import intlTelInput from 'intl-tel-input';
+import { DataService } from '../helper/data.service';
 
 @Component({
   selector: 'app-index',
@@ -15,7 +16,7 @@ export class IndexComponent implements OnInit {
   iti: any;
   phoneNumber!: any;
 
-  constructor(private route: Router) {
+  constructor(private route: Router, private apiCall: DataService, private toastr: ToastrService) {
     const routeExceptions = ['/login',]
 
     this.route.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
@@ -84,5 +85,29 @@ export class IndexComponent implements OnInit {
   onPhoneNumberChange = () => {
     const phoneNumber = this.iti.getNumber();
     this.phoneNumber.get('phone_number')?.setValue(phoneNumber);
+  }
+
+  submit() {
+    if (!this.phoneNumber) {
+      this.toastr.error('Please enter phone number', 'Error');
+      return
+    }
+
+    let data = {
+      phone: "+" + this.selectedCountryCode + this.phoneNumber
+
+    }
+    this.apiCall.saveCallback(data).subscribe((res: any) => {
+      let closeModal = document.getElementById('closeModal');
+      closeModal?.click();
+
+      if (res.success) {
+        this.toastr.success('We will contact you shortly', 'Success');
+      } else {
+        this.toastr.error("Something went wrong!", 'Error');
+      }
+    })
+
+
   }
 }
