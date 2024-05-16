@@ -10,7 +10,7 @@ export class CallBackComponent implements OnInit {
   callbacks: any = [];
   loader = false;
   page = 1;
-  itemsPerPage = 15;
+  itemsPerPage = 30;
   totalRecords = 0;
 
   constructor(private api: DataService) { }
