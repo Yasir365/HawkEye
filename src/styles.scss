@@ -353,6 +353,9 @@ h3 {
 }
 
 .modal-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     .close {
         top: 10px;
@@ -372,6 +375,19 @@ h3 {
         i {
             font-size: 1.5rem;
 
+        }
+    }
+
+    .call-us-btn {
+        border: none;
+        outline: none;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 100%);
+        color: white;
+
+        a {
+            color: white;
+            display: block;
         }
     }
 }
